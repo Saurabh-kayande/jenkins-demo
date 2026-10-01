@@ -1,5 +1,5 @@
 #!/bin/bash
-
+chmod +x app.sh
 output=$(./app.sh)
 
 if [ "$output" = "Hello from Jenkins CI" ]; then

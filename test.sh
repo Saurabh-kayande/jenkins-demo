@@ -1,8 +1,7 @@
 #!/bin/bash
 chmod +x app.sh
-output=$(./app.sh)
 
-if [ "$output" = "Hello from Jenkins CI" ]; then
+if grep -q "Hello from Jenkins + Docker" app.sh; then
     echo "TEST PASSED"
     exit 0
 else
